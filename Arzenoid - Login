@@ -1,0 +1,29 @@
+<!DOCTYPE html>  <html>  
+<head>  
+  <title>Login - Arzenoidbot</title>  
+  <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+  <h1>Login to Arzenoidbot</h1>  
+  <form action="dashboard.html" method="GET" onsubmit="return validateActivation()">  
+    <label>Email:</label><br>  
+    <input type="email" id="email" required><br><br>  <label>Activation Code:</label><br>  
+<input type="text" id="code" required><br><br>  
+
+<button type="submit">Login</button>
+
+  </form>    <script>  
+    function validateActivation() {  
+      const allowedCodes = ["ARZSTART123", "PREMIUM456"]; // Set valid activation codes  
+      const code = document.getElementById("code").value.trim();  
+  
+      if (!allowedCodes.includes(code)) {  
+        alert("Invalid or inactive account. Please contact admin.");  
+        return false;  
+      }  
+  
+      return true;  
+    }  
+  </script>  </body>  
+</html>  What will I put in title name
+
